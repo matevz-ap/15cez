@@ -31,16 +31,6 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
-  - label: "Watch"
-    name: "watch"
-    folder: "src/watches"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Watch name", name: "name", widget: "string" }
-      - { label: "Price", name: "price", widget: "string" }
-      - { label: "Image url", name: "img_url", widget: "string" }
   - label: "Settings"
     name: "settings"
     editor:
