@@ -1,5 +1,6 @@
 ---
 title: Tudor ali Omega?
+title_image: https://hodinkee.imgix.net/uploads/images/db230504-99fd-4b8f-a005-1ada07b9f4b8/20230511_Auctions_Christies_098.jpg?ixlib=rails-1.1.0&fm=jpg&q=55&auto=format&usm=12&fit=crop&ch=Width%2CDPR%2CSave-Data&alt=&ar=16%3A9&w=880
 description: Zaradi njunih podobnih cenovnih pozicij, sta ti dve znamki podobno
   primerjani med sabo. V tem zapisu se bom (seveda) osredotočil na vintage nabor
   obeh; razloge, zakaj bi človek izbral eno, drugo ali obe.
