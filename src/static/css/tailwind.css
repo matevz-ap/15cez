@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*Your Custom CSS Goes here*/
+@font-face { font-family: "Riki"; src: url('../fonts/Riki-Bold.otf') format("opentype"); } 
 
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
