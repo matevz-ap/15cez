@@ -4,15 +4,16 @@ title: Neat Starter
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen justify-center items-center">
-  <h1>
-    Petnajst cez
-  </h1>
+<div class="container flex flex-col">
+  <main class="flex-grow">
+    <h1>
+      Petnajst cez
+    </h1>
+    <p class="text-center">
+      Vse o vintage urah na enem mestu
+    </p>
 
-  <p>
-    Vse o vintage urah na enem mestu
-  </p>
-  <div id="recent_posts" style="height: 140px; display: block">
+    <div id="recent_posts" style="height: 140px; display: block">
     {% set postslist = collections.post %}
     {% for post in postslist | reverse %}
       {% if post.data.title_image %}
@@ -21,5 +22,21 @@ path: home
     {% endfor %}
   </div>
 
-  {% include "./_includes/partials/content.html" %}
+    {% include "./_includes/partials/content.html" %}
+  </main>
+  
+  <footer class="bg-gray-900 py-4 mt-auto absolute bottom-0 w-full">
+    <div class="container mx-auto px-4 w-100">
+      <div class="flex justify-between items-center">
+        <ul class="flex space-x-4">
+          <li><a href="#" class="text-white hover:text-gray-200">Domov</a></li>
+          <li><a href="#" class="text-white hover:text-gray-200">Ure</a></li>
+          <li><a href="#" class="text-white hover:text-gray-200">Kdo smo?</a></li>
+        </ul>
+        <ul class="flex space-x-4">
+          <li><a href="https://www.instagram.com/15cez/" class="text-white hover:text-gray-200"><i class="bi bi-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </div>
