@@ -9,7 +9,7 @@ layout: blog
             <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
             {% for post in postslist | reverse %}
             <div class="group relative">
-                <div class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 h-80">
                 {% if post.data.title_image %}
                     <img src="{{ post.data.title_image }}" alt="{{ post.data.title }}" loading="lazy"
                         class="h-full w-full object-cover object-center lg:h-full lg:w-full">
@@ -31,13 +31,13 @@ layout: blog
                             </time>
                         </p>
                         {% if post.data.description %}
-                            <p class="text-lg text-gray-500 mb-3">
+                            <p class="text-lg text-gray-500 mb-3 truncate">
                                 {{ post.data.description }}
                             </p>
                         {% endif %}
                     </div>
                     <p>
-                        <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                        <a href="{{ post.url | url }}" class="font-bold text-lg">
                             Read more →
                         </a>
                     </p>
