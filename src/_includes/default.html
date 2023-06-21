@@ -23,8 +23,27 @@
   </head>
   <body>
     {% include "./partials/navbar.html" %}
+    <main class="relative min-h-full">
+      <div class="pb-10">
+        {{ content | safe }}
+      </div>
 
-    {{ content | safe }}
+      <footer class="bg-gray-900 py-4 absolute bottom-0 w-full">
+        <div class="container mx-auto px-4 w-100">
+          <div class="flex justify-between items-center">
+            <ul class="flex space-x-4">
+              <li><a href="#" class="text-white hover:text-gray-200">Domov</a></li>
+              <li><a href="#" class="text-white hover:text-gray-200">Ure</a></li>
+              <li><a href="#" class="text-white hover:text-gray-200">Kdo smo?</a></li>
+            </ul>
+            <ul class="flex space-x-4">
+              <li><a href="https://www.instagram.com/15cez/" class="text-white hover:text-gray-200"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+
 
     <script src="/static/js/alpine.js"></script>
 
@@ -42,8 +61,29 @@
     {% endif %}
     <script>
       $('#recent_posts').slick({
-        infinite: true,
-        arrows: true,
+        centerMode: true,
+        centerPadding: '100px',
+        slidesToShow: 1,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
       });
     </script>
   </body>
