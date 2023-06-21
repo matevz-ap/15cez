@@ -4,7 +4,7 @@ title: Neat Starter
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+<div class="container mx-auto lg:h-screen justify-center items-center">
   <h1>
     Petnajst cez
   </h1>
@@ -12,6 +12,14 @@ path: home
   <p>
     Vse o vintage urah na enem mestu
   </p>
+  <div id="recent_posts" style="height: 140px; display: block">
+    {% set postslist = collections.post %}
+    {% for post in postslist | reverse %}
+      {% if post.data.title_image %}
+          <img src="{{ post.data.title_image }}" alt="{{ post.data.title }}" style="max-width: 100%; height: auto">
+      {% endif %}
+    {% endfor %}
+  </div>
 
   {% include "./_includes/partials/content.html" %}
 </div>
