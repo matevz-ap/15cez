@@ -16,10 +16,39 @@ path: home
     {% set postslist = collections.post %}
     {% for post in postslist | reverse %}
       {% if post.data.title_image %}
-          <img src="{{ post.data.title_image }}" alt="{{ post.data.title }}" class="h-1.5 w-full mx-2 object-fit" style="height: 20em">
+      <div class="relative" class="w-full">
+        <img src="{{ post.data.title_image }}" alt="{{ post.data.title }}" class="object-cover">
+        <div class="absolute bottom-0 text-center w-full h-20 p-2 bg-slate-50 bg-opacity-20">
+          <h2 class="text-white font-bold truncate">{{ post.data.title }}</h2>
+          <p class="text-white">{{ post.data.description }}</p>
+        </div>
+      </div>
       {% endif %}
     {% endfor %}
   </div>
+  <div class="bg-gray-100 p-4 mt-20 text-center">
+    <h1> Poglej kaj je na voljo</h1>
+    <a href="/blog" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">
+      Odpelji me
+    </button>
+  </div>
+  <h1 class="mt-20">Video</h1>
+  <div class="d-block" id="videos">
+    <img src="https://i.ytimg.com/vi/IKjyixLMqN0/maxresdefault.jpg" class="h-1.5 w-full mx-2 object-fit">
+    <img src="https://i.ytimg.com/vi/IKjyixLMqN0/maxresdefault.jpg" class="h-1.5 w-full mx-2 object-fit">
+    <img src="https://i.ytimg.com/vi/IKjyixLMqN0/maxresdefault.jpg" class="h-1.5 w-full mx-2 object-fit">
+  </div>
 
+  <h1 class="mt-20">Kdo smo ?</h1>
+  <p class="text-center p-4">15 cez je kolektiv prijaznih ljudi, ki jih druzi ljubezen do ur. Dej mi danr dej ga ful dej ga ful. A misls da si faca a misls da si kul.
+    Ena na ena dva na dva al pa sam spilamo ta basket lahko tut po cel dan. Napise se kej na papir pa se podpise se podpise. AI majka ti jebem. True
+  </p>
+
+
+  <div class="bg-gray-100 p-10 mt-10">
+    <h1>Dej nm mail</h1>
+    <p class="text-center mb-5">Prijavi se na nas mailing list in ne zamudi nicesar kar se dogaja v svetu vintage ur. Sam se ne dela</p>
+    <input type="text" placeholder="Email" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+  </div>
     {% include "./_includes/partials/content.html" %}
 </div>

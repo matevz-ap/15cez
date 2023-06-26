@@ -24,7 +24,7 @@
   <body>
     {% include "./partials/navbar.html" %}
     <main class="relative min-h-full">
-      <div class="pb-10">
+      <div class="">
         {{ content | safe }}
       </div>
 
@@ -33,11 +33,11 @@
           <div class="flex justify-between items-center">
             <ul class="flex space-x-4">
               <li><a href="#" class="text-white hover:text-gray-200">Domov</a></li>
-              <li><a href="#" class="text-white hover:text-gray-200">Ure</a></li>
-              <li><a href="#" class="text-white hover:text-gray-200">Kdo smo?</a></li>
             </ul>
             <ul class="flex space-x-4">
               <li><a href="https://www.instagram.com/15cez/" class="text-white hover:text-gray-200"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://www.instagram.com/15cez/" class="text-white hover:text-gray-200"><i class="bi bi-youtube"></i></a></li>
+
             </ul>
           </div>
         </div>
@@ -64,6 +64,35 @@
         centerMode: true,
         centerPadding: '100px',
         slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+      $('#videos').slick({
+        centerMode: true,
+        centerPadding: '100px',
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 768,
