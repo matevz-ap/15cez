@@ -16,7 +16,7 @@ path: home
     {% set postslist = collections.post %}
     {% for post in postslist | reverse %}
       {% if post.data.title_image %}
-      <div class="relative" class="w-full" style="height: 150px">
+      <div class="relative" class="w-full" style="height: 200px">
         <img src="{{ post.data.title_image }}" alt="{{ post.data.title }}" class="object-cover h-full w-full">
         <div class="absolute bottom-0 text-center w-full h-10 p-2 bg-gray-300 bg-opacity-60">
           <h4 class="text-black font-bold truncate mb-0">{{ post.data.title }}</h2>
