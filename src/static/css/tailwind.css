@@ -4,8 +4,16 @@
 
 @font-face { font-family: "Riki"; src: url('../fonts/Riki-Bold.otf') format("opentype"); } 
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+}
+
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+}
+
+h2 {
+  @apply text-3xl font-bold mb-3;
 }
 
 h3 {
