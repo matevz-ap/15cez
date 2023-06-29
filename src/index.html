@@ -48,7 +48,10 @@ path: home
   <div class="bg-gray-100 p-10 mt-10">
     <h1>Dej nm mail</h1>
     <p class="text-center mb-5">Prijavi se na nas mailing list in ne zamudi nicesar kar se dogaja v svetu vintage ur. Sam se ne dela</p>
-    <input type="text" placeholder="Email" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+    <form netlify>
+      <input type="text" name="email" placeholder="Email" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">Give email</button>
+    </form>
   </div>
     {% include "./_includes/partials/content.html" %}
 </div>
