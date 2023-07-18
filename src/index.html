@@ -13,18 +13,18 @@ path: home
     </p>
 
     <div id="recent_posts">
-    {% set postslist = collections.post %}
-    {% for post in postslist | reverse %}
-      {% if post.data.title_image %}
-      <div class="relative" class="w-full" style="height: 200px">
-        <img src="{{ post.data.title_image }}" alt="{{ post.data.title }}" class="object-cover h-full w-full">
-        <div class="absolute bottom-0 text-center w-full h-10 p-2 bg-gray-300 bg-opacity-60">
-          <h4 class="text-black font-bold truncate mb-0">{{ post.data.title }}</h2>
+      {% set postslist = collections.post %}
+      {% for post in postslist | reverse %}
+        {% if post.data.title_image %}
+        <div class="relative mx-2" class="w-full" style="height: 200px">
+          <img src="{{ post.data.title_image }}" alt="{{ post.data.title }}" class="object-cover h-full w-full">
+          <div class="absolute bottom-0 text-center w-full h-10 p-2 bg-gray-300 bg-opacity-60">
+            <h4 class="text-black font-bold truncate mb-0">{{ post.data.title }}</h2>
+          </div>
         </div>
-      </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   <div class="bg-gray-100 p-4 mt-20 text-center">
     <h2> Poglej kaj je na voljo</h2>
     <a href="/blog" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">
