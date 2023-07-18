@@ -17,5 +17,9 @@ prism: true
     </div>
     <article class="prose lg:prose-xl my-4 mx-auto">
         {{ content | safe }}</article>
-
+    <div class="flex justify-center">
+        {% for post in related_posts %}
+        {{ post.title }}
+        {% endfor %}
+    </div>
 </div>
