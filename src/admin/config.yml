@@ -25,6 +25,15 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { 
+        label: "Similar Posts", 
+        widget: "relation", 
+        name: "related_posts", 
+        collection: "blog", 
+        multiple: true, 
+        search_fields: ["title"], 
+        value_field: "title",
+      }
       - widget: select
         label: "tags"
         name: "tags"
