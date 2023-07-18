@@ -6,15 +6,11 @@ only_available: true
 <section class="mt-15">
     {% set postslist = collections.post %}
     <div class="bg-white">
-        {% if only_available %}
-        <a href="/blog" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded mt-5">All posts -></a>
-        {% else %}
-        <a href="/ure_na_voljo" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded mt-5">Only available -></a>
-        {% endif %}
+        <a href="/blog" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded mt-5">Vse ure -></a>
         <div class="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-18 lg:max-w-7xl lg:px-8 pb-40">
             <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
             {% for post in postslist | reverse %}
-            {% if post.data.available %}
+            {% if post.data.is_available %}
             <div class="group relative">
                 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                     {% if post.data.title_image %}
