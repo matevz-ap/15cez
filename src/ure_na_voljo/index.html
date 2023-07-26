@@ -6,8 +6,10 @@ only_available: true
 <section class="mt-15">
     {% set postslist = collections.post %}
     <div class="bg-white">
-        <a href="/blog" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded mt-5">Vse ure -></a>
         <div class="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-18 lg:max-w-7xl lg:px-8 pb-40">
+            <div class="text-right">
+                <a href="/blog" class="border border-slate-800 text-slate-800 py-2 px-4 mt-5">Vse ure →</a>
+            </div>
             <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
             {% for post in postslist | reverse %}
             {% if post.data.is_available %}
